@@ -1,24 +1,39 @@
 import React from 'react'
 import "./Question.css"
 import Card from '../Card/Card'
+import { questions } from '../../questions'
 
-const Question = () => {
+const Question = ({
+    questionIndex,
+    setQuestionIndex,
+    questions,
+    setShowQuestionsPage,
+    setShowFinalPage,
+    score,
+    setScore,
+}) => {
+    const handleClick = (isCorrect) => {}
   return (
     <Card>
-        <h1 className='question'>Example Question</h1>
+        <h1 className='question'>{questions[questionIndex].questionText}</h1>
         <div className='answers'>
-            <div className='answer'><p>Answer</p></div>
-            <div className='answer'><p>Answer</p></div>
-            <div className='answer'><p>Answer</p></div>
-            <div className='answer'><p>Answer</p></div>
+            {questions[questionIndex].answers.map((answer, index) => (
+                <div 
+                    className='answer' 
+                    key={index}
+                    onClick={() => handleClick(answer.correct)}
+                    >
+                    <p>{answer.answerText}</p>
+                </div>
+            ) )}
         </div>
 
         <p className='score'>
-            Score: <span>0</span>
+            Score: <span>{score}</span>
         </p>
 
         <p className='question-number'>
-            Question: <span>1</span>/10
+            Question: <span>{questionIndex + 1}</span>/10
         </p>
     </Card>
   )

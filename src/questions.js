@@ -1,38 +1,38 @@
 export const questions = [
     {
-        question: 'What is the capital of France?',
+        questionText: 'What is the capital of France?',
         answers: [
-            { text: 'New York', correct: false },
-            { text: 'London', correct: false },
-            { text: 'Paris', correct: true },
-            { text: 'Dublin', correct: false },
+            { answerText: 'New York', correct: false },
+            { answerText: 'London', correct: false },
+            { answerText: 'Paris', correct: true },
+            { answerText: 'Dublin', correct: false },
         ],
     },
     {
-        question: 'Who is CEO of Tesla?',
+        questionText: 'Who is CEO of Tesla?',
         answers: [
-            { text: 'Jeff Bezos', correct: false },
-            { text: 'Elon Musk', correct: true },
-            { text: 'Bill Gates', correct: false },
-            { text: 'Tony Stark', correct: false },
+            { answerText: 'Jeff Bezos', correct: false },
+            { answerText: 'Elon Musk', correct: true },
+            { answerText: 'Bill Gates', correct: false },
+            { answerText: 'Tony Stark', correct: false },
         ],
     },
     {
-        question: 'The iPhone was created by which company?',
+        questionText: 'The iPhone was created by which company?',
         answers: [
-            { text: 'Apple', correct: true },
-            { text: 'Intel', correct: false },
-            { text: 'Amazon', correct: false },
-            { text: 'Microsoft', correct: false },
+            { answerText: 'Apple', correct: true },
+            { answerText: 'Intel', correct: false },
+            { answerText: 'Amazon', correct: false },
+            { answerText: 'Microsoft', correct: false },
         ],
     },
     {
-        question: 'How many Harry Potter books are there?',
+        questionText: 'How many Harry Potter books are there?',
         answers: [
-            { text: '1', correct: false },
-            { text: '4', correct: false },
-            { text: '6', correct: false },
-            { text: '7', correct: true },
+            { answerText: '1', correct: false },
+            { answerText: '4', correct: false },
+            { answerText: '6', correct: false },
+            { answerText: '7', correct: true },
         ],
     },
 ]
