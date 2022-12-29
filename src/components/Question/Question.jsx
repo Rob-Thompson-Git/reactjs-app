@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Question.css"
 import Card from '../Card/Card'
-import { questions } from '../../questions'
 
 const Question = ({
     questionIndex,
@@ -12,7 +11,20 @@ const Question = ({
     score,
     setScore,
 }) => {
-    const handleClick = (isCorrect) => {}
+    const handleClick = (isCorrect) => {
+        if (questionIndex < 3) {
+            if (isCorrect) {
+                setScore((score) => (score += 100))
+            }
+            setQuestionIndex((prevIndex) => prevIndex + 1)
+        } else {
+            if (isCorrect) {
+                setScore((score) => (score += 100));
+            }
+            setShowQuestionsPage(false);
+            setShowFinalPage(true);
+        }
+    };
   return (
     <Card>
         <h1 className='question'>{questions[questionIndex].questionText}</h1>
@@ -36,7 +48,7 @@ const Question = ({
             Question: <span>{questionIndex + 1}</span>/10
         </p>
     </Card>
-  )
-}
+  );
+};
 
-export default Question
+export default Question;

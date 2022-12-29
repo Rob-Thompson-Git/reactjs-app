@@ -16,22 +16,22 @@ function App() {
 
   return (
   <div className='container'>
-    {showStartPage && 
+    {showStartPage && (
     <StartPage
       setShowStartPage={setShowStartPage}
       setShowQuestionsPage={setShowQuestionsPage}
       topScore={topScore}
       username={username}
       setUsername={setUsername}
-     />}
-    {showQuestionsPage && 
+     />)}
+    {showQuestionsPage && (
       <QuestionsPage 
       score={score}
       setScore={setScore}
       setShowQuestionsPage={setShowQuestionsPage}
       setShowFinalPage={setShowFinalPage}
-      />}
-    {showFinalPage && 
+      />)}
+    {showFinalPage && (
       <FinalPage 
         score={score}
         setScore={setScore}
@@ -41,7 +41,7 @@ function App() {
         setShowFinalPage={setShowFinalPage}
         username={username}
         setUsername={setUsername}
-      />}
+      />)}
   </div>
   );
 }
